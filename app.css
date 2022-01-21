@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+/* SCSS HEX */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: Orbitro, sans-serif;
+  color: rgba(0, 0, 0, 0.836);
+}
+
+.app-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #e5e5e5ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  position: relative;
+  width: 400px;
+  height: 85%;
+  border: 1px solid rgba(0, 0, 0, 0.836);
+  margin-bottom: 1em;
+}
+
+.app-container h1 {
+  text-align: center;
+}
+.app-container .display-wrapper {
+  width: 100%;
+  height: 25%;
+}
+.app-container .display-wrapper .display {
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+  display: grid;
+  grid-column: 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+.app-container .display-wrapper .display .result, .app-container .display-wrapper .display .calculation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  width: 100%;
+}
+.app-container .display-wrapper .display .calculation {
+  font-size: 2.3rem;
+}
+.app-container .key-wrapper {
+  width: 100%;
+  height: 75%;
+}
+.app-container .key-wrapper .key-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.app-container .key-wrapper .key-container .number, .app-container .key-wrapper .key-container .method, .app-container .key-wrapper .key-container .operators, .app-container .key-wrapper .key-container #equals {
+  border: 0.1px solid #e5e5e5ff;
+  transition: all 200ms ease;
+}
+.app-container .key-wrapper .key-container .number:hover, .app-container .key-wrapper .key-container .method:hover, .app-container .key-wrapper .key-container .operators:hover, .app-container .key-wrapper .key-container #equals:hover {
+  background: #e5e5e5ff;
+  color: black;
+}
+.app-container .key-wrapper .key-container .number, .app-container .key-wrapper .key-container .method {
+  background: rgba(0, 0, 0, 0.836);
+  color: #ffffffff;
+  font-size: 2em;
+}
+.app-container .key-wrapper .key-container .operators {
+  background: rgba(40, 66, 123, 0.842);
+  color: #ffffffff;
+  font-size: 2em;
+}
+.app-container .key-wrapper .key-container #equals {
+  background: #fca311ff;
+}
+.app-container .key-wrapper .key-container #add {
+  grid-column: 4/5;
+}
+.app-container .key-wrapper .key-container #equals {
+  grid-column: 3/5;
+  grid-row: 5/6;
+}
+.app-container .key-wrapper .key-container #multiply {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+.app-container .key-wrapper .key-container #divide {
+  grid-column: 4/5;
+  grid-row: 1;
+}
+.app-container .key-wrapper .key-container #subtract {
+  grid-row: 3/4;
+  grid-column: 4;
+}
+.app-container .key-wrapper .key-container #zero {
+  grid-column: 2/4;
+  grid-row: 4;
+}
+.app-container .key-wrapper .key-container #decimal {
+  grid-row: 4;
+}/*# sourceMappingURL=app.css.map */

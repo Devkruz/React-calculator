@@ -1,0 +1,141 @@
+//google font Orbitro
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* SCSS HEX */
+$black: rgba(0, 0, 0, 0.836);
+$dark-cornflower-blue: rgba(40, 66, 123, 0.842);
+$orange-web: #fca311ff;
+$platinum: #e5e5e5ff;
+$white: #ffffffff;
+
+//reset default styling
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+     font-family:Orbitro, sans-serif;
+     color: $black;
+}
+
+
+//app-wrapper style
+.app-wrapper {
+     width: 100vw;
+     height: 100vh;
+     background:$platinum ;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+//app-contianer style 
+.app-container {
+      position: relative;
+      width: 400px;
+      height: 85%;
+     //  background: $black;
+      border: 1px solid $black;
+      margin-bottom: 1em;
+}
+
+//app-container element style
+.app-container { 
+    h1 {
+         text-align: center;
+    }
+
+     .display-wrapper { 
+          width: 100%;
+          height: 25%;
+          .display {
+           width: 100%;
+           height: 100%;
+           background: white;
+           color: black;
+           display: grid;
+           grid-column: 1fr;
+           grid-template-rows: 1fr 2fr;
+           .result {
+               //  border: 1px solid pink;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 20px ;
+                width: 100%
+           }
+           .calculation {
+                @extend .result;
+                font-size: 2.3rem;
+           }
+      }
+     }
+
+      .key-wrapper {
+           width: 100%;
+           height: 75%;
+            .key-container {
+                 width: 100%;
+                 height: 100%;
+                 display: grid;
+                 grid-template-columns: 1fr 1fr 1fr 1fr;
+                 grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                 .number, .method, .operators, #equals {
+                    //    outline: none;
+                       border:0.1px solid $platinum;
+                       transition: all 200ms ease;
+                       &:hover {
+                            background: $platinum;
+                            color: black;
+                       }
+                       
+                 }
+                 .number, .method {
+                     background:$black;
+                     color: $white;
+                     font-size: 2em;
+                 }
+                 .operators {
+                       background:$dark-cornflower-blue;
+                       color:$white;
+                       font-size: 2em;
+                 }
+                 #equals {
+                       background:$orange-web;
+                 }
+                 #add {
+                
+                   grid-column:4 / 5 ;
+                 }
+                 #equals {
+                      grid-column: 3 / 5;
+                      grid-row: 5 / 6;
+                 }
+                 #multiply {
+                       grid-row: 2 / 3;
+                       grid-column: 4 / 5;
+                 }
+                 #divide {
+                      grid-column: 4 / 5;
+                      grid-row:1
+                 }
+                 #subtract {
+                      grid-row: 3 / 4;
+                      grid-column: 4;
+                 }
+                 #zero {
+                      grid-column: 2 / 4;
+                      grid-row: 4;
+                 }
+                 #decimal {
+                       grid-row: 4;
+                 }
+                 
+            }
+      }
+    
+}
