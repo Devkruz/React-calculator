@@ -52,7 +52,7 @@ body {
      .display-wrapper { 
           width: 100%;
           height: 25%;
-          .display {
+          .display-container {
            width: 100%;
            height: 100%;
            background: white;
@@ -65,12 +65,17 @@ body {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                padding-right: 20px ;
-                width: 100%
+                padding-right: 20px;
+                font-size: 15px;
+                font-style: italic;
+                width: 100%;
+                color: purple;
            }
            .calculation {
                 @extend .result;
                 font-size: 2.3rem;
+                color:$black;
+                font-style: normal;
            }
       }
      }
